@@ -1,0 +1,6 @@
+SELECT
+  *
+FROM
+  taxirides.realtime
+WHERE
+  ride_status='dropoff'
