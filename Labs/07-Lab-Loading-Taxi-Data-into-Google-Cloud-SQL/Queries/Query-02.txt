@@ -1,0 +1,23 @@
+use bts;
+
+select distinct(pickup_location_id) from trips;
+
+select
+  max(trip_distance),
+  min(trip_distance)
+from
+  trips;
+
+select count(*) from trips where trip_distance = 0;
+
+select count(*) from trips where fare_amount < 0;
+
+select
+  payment_type,
+  count(*)
+from
+  trips
+group by
+  payment_type;
+
+exit
